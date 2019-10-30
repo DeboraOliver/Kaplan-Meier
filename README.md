@@ -7,7 +7,7 @@ Debora Oliveira
 Overview
 --------
 
-A Kaplan-Meier analysis allows estimation of survival over time, even when patients drop out or are studied for different lengths of time. Thus, the goal is to estimate a population survival curve from a sample. The curve may be estimated simply by computing the fraction surviving at each time.
+A Kaplan-Meier analysis allows estimation of survival over time, even when patients drop out or are studied for different lengths of time. The goal is to estimate a population survival curve by computing the fraction surviving at each time.
 
 ## 1. Requirements
 
@@ -26,7 +26,7 @@ library(knitr)
 
 ### i) redcapAPI
 
-In this project, we use data collected using redcap to further use redcap API to establish a connection between the two softwares. Despite recapConnection(), this package also has other very useful tools, such as exportRecords() which allows to import to RStudio our patient's data.
+In this project, we use data collected using redcap to further use redcap API to establish a connection between the two softwares. Apart from recapConnection(), this package also has other very useful tools, such as exportRecords() which allows to import into RStudio patient's data.
 
 ``` r
 source("token.txt")
@@ -135,7 +135,6 @@ ggsurvplot(icc.fit, fun = NULL, color = "strata", palette =  "hue", linetype = 1
            risk.table.height = 0.25, surv.plot.height = 0.75, ggtheme = theme_minimal())
 ```
 
-![](READ_ME_files/figure-markdown_github/curvacod-1.png)
 
 ## 2. Organizing data to fit in Surv()
 
